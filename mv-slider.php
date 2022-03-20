@@ -38,10 +38,15 @@ if (!class_exists('MV_Slider')) {
         {
             $this->define_constants();
             add_action('admin_menu', [ $this, 'mv_slider_admin_menu' ]);
+
             require_once(MV_SLIDER_PATH . 'post-types/class.mv-slider-cpt.php');
+            new MV_Slider_Post_Type();
+
             require_once(MV_SLIDER_PATH . 'mv-slider-settings.php');
-            $mv_slider_post_type = new MV_Slider_Post_Type();
-            $mv_slider_settings = new MV_Slider_Settings();
+            new MV_Slider_Settings();
+
+            require_once(MV_SLIDER_PATH . 'shortcodes/mv-slider_shortcode.php');
+            new MV_Slider_Shortcode();
         }
 
         public function mv_slider_admin_menu(){
