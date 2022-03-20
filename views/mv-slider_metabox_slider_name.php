@@ -6,7 +6,7 @@ $mv_slider_name = get_post_meta( $post->ID, 'mv_slider_name', true );
     <input type="hidden" name="mv_slider_nonce" value="<?php echo wp_create_nonce('mv_slider_nonce')?>">
     <tr>
         <th>
-            <label for="mv_slider_name">Slider Name</label>
+            <label for="mv_slider_name">Name</label>
         </th>
         <td>
             <input
