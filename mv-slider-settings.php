@@ -38,7 +38,7 @@ if (!class_exists('MV_Slider_Settings')) {
                 'mv_slider_settings_page_1',
                 'mv-slider-settings_shortcode'
             );
-
+            /*
             add_settings_field(
                 'mv_slider_title',
                 'Slider Title',
@@ -49,7 +49,7 @@ if (!class_exists('MV_Slider_Settings')) {
                     'label_for' => 'mv_slider_title'
                 ]
             );
-
+            */
             add_settings_field(
                 'mv_slider_bullets',
                 'Display Control Bullets',
@@ -90,6 +90,7 @@ if (!class_exists('MV_Slider_Settings')) {
             require_once(MV_SLIDER_PATH . 'views/mv-slider-admin-shortcode.php');
         }
 
+        /*
         public function options_template_title_input()
         {
             ?>
@@ -100,7 +101,7 @@ if (!class_exists('MV_Slider_Settings')) {
                    value="<?php echo MV_Slider_Settings::$options['mv_slider_title'] ?? '' ?>"
             />
             <?php
-        }
+        */
 
         public function options_template_bullet_input()
         {

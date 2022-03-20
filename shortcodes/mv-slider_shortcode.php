@@ -7,11 +7,10 @@ if ( ! class_exists( 'MV_Slider_Shortcode')) {
         }
 
         public function mv_slider_shortcode( $atts = [], $content = null, $tag = '' ) {
-            $atts = array_change_key_case( $atts, CASE_LOWER );
+            $atts = array_change_key_case( (array) $atts, CASE_LOWER );
 
             extract( shortcode_atts(
                 [
-                    'id' => '',
                     'slider_name' => '',
                     'order_by' => 'date'
                 ],
@@ -21,6 +20,10 @@ if ( ! class_exists( 'MV_Slider_Shortcode')) {
             if( ! empty($id) ) {
                 $id = array_map('absint', explode(',', $id));
             }
+
+            ob_start();
+            require(MV_SLIDER_PATH . 'views/mv-slider_shortcode.php');
+            return ob_get_clean();
         }
     }
 }
