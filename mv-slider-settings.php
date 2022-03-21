@@ -121,11 +121,20 @@ if (!class_exists('MV_Slider_Settings')) {
             ?>
             <select name="mv_slider_options[mv_slider_style]" id="mv_slider_style"
                     value="<?php echo MV_Slider_Settings::$options['mv_slider_style'] ?? '' ?>">
-                <option <?php selected('dark', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
-                        value="dark"><?php echo esc_html__('Dark') ?>
+                <option <?php selected('style-blue', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
+                        value="style-blue"><?php echo esc_html__('Blue style') ?>
                 </option>
-                <option <?php echo selected('light', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
-                        value="light"><?php echo esc_html__('Light') ?>
+                <option <?php echo selected('style-red', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
+                        value="style-red"><?php echo esc_html__('Red style') ?>
+                </option>
+                <option <?php echo selected('style-green', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
+                        value="style-green"><?php echo esc_html__('Green style') ?>
+                </option>
+                <option <?php echo selected('style-orange', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
+                        value="style-orange"><?php echo esc_html__('Orange style') ?>
+                </option>
+                <option <?php echo selected('style-purple', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
+                        value="style-purple"><?php echo esc_html__('Purple style') ?>
                 </option>
             </select>
             <?php

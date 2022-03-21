@@ -27,7 +27,7 @@
 }
 
 .mv-slider .flex-control-nav {
-    bottom: 10px !important;
+    bottom: 35px !important;
 }
 
 .mv-slider .flex-direction-nav a{
@@ -42,7 +42,7 @@
 }
 
 .mv-slider .slider-details-container .subtitle{
-    margin-bottom: 15px;        
+    margin-bottom: 15px;
 }
 
 .mv-slider .slider-details-container .slider-title{
@@ -73,4 +73,86 @@
 
 .mv-slider .flex-control-nav li {
     margin: 0 3px !important;
+}
+
+.mv-slider .mvs-container .slider-title h2 {
+    color: #fff;
+    font-family: 'flexslider-icon';
+}
+.mv-slider.style-blue .slider-details-container .link{
+    background-color: rgb(40,109,209);
+}
+
+
+.mv-slider.style-blue .flex-control-paging li a.flex-active {
+    background: rgb(40,109,209) !important;
+}
+
+.mv-slider.style-blue .flex-control-paging li a {
+    background: rgb(247, 247, 247);
+}
+
+
+.mv-slider.style-red .slider-details-container .link{
+    background-color: rgb(120,17,20);
+}
+
+.mv-slider.style-red .flex-control-paging li a.flex-active {
+    background: rgb(120,17,20) !important;
+    width: 25px;
+}
+
+.mv-slider.style-red .flex-control-paging li a {
+    background: rgb(247, 247, 247);
+    height: 10px;
+    width: 15px;
+    border-radius: 0;
+}
+
+.mv-slider.style-green .slider-details-container .link{
+    background-color: rgb(19,177,16);
+}
+
+.mv-slider.style-green .flex-control-paging li a.flex-active {
+    background: rgb(19,177,16) !important;
+    width: 25px;
+}
+
+.mv-slider.style-green .flex-control-paging li a {
+    background: rgb(247, 247, 247);
+    height: 10px;
+    width: 15px;
+    border-radius: 0;
+}
+
+.mv-slider.style-orange .slider-details-container .link{
+    background-color: rgb(255,102,0);
+}
+
+.mv-slider.style-orange .flex-control-paging li a.flex-active {
+    background: rgb(255,102,0) !important;
+    width: 25px;
+}
+
+.mv-slider.style-orange .flex-control-paging li a {
+    background: rgb(247, 247, 247);
+    height: 10px;
+    width: 15px;
+    border-radius: 0;
+}
+
+.mv-slider.style-purple .slider-details-container .link{
+    background-color: rgb(162,102,254);
+}
+
+.mv-slider.style-purple .flex-control-paging li a.flex-active {
+    background: rgb(162,102,254) !important;
+    width: 25px;
+}
+
+.mv-slider.style-purple .flex-control-paging li a {
+    background: rgb(247, 247, 247);
+    height: 10px;
+    width: 15px;
+    border-radius: 0;
 }

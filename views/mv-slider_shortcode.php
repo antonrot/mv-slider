@@ -1,17 +1,18 @@
 <h3><?php echo ( ! empty ( $content ) ) ? esc_html( $content ) : ''; ?></h3>
 
 <?php
-$args = [
+
+$args = array(
     'post_type' => 'mv-slider',
     'post_status' => 'publish',
     'meta_key' => 'mv_slider_name',
     'meta_value' => $slider_name,
     'order_by' => $order_by
-];
+);
 $sliders_query = new WP_Query($args);
 ?>
 
-<div class="mv-slider flexslider ">
+<div class="mv-slider flexslider <?php echo MV_Slider_Settings::$options['mv_slider_style'] ?? '' ?>">
     <ul class="slides">
         <?php
         if ($sliders_query->have_posts()) :
