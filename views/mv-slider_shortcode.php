@@ -21,7 +21,14 @@ $sliders_query = new WP_Query($args);
                 $link_url = get_post_meta( $sliders_query->post->ID, 'mv_slider_link_url', true );
         ?>
         <li>
-            <?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?>
+            <?php
+            if(has_post_thumbnail()) {
+                the_post_thumbnail('full', ['class' => 'img-fluid']);
+            } else {
+                echo "<img src='". MV_SLIDER_URL . "assets/images/default.jpeg' class='img-fluid'>";
+            }
+
+            ?>
             <div class="mvs-container">
                 <div class="slider-details-container">
                     <div class="wrapper">
