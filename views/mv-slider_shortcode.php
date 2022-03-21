@@ -1,17 +1,18 @@
 <h3><?php echo ( ! empty ( $content ) ) ? esc_html( $content ) : ''; ?></h3>
+
+<?php
+$args = [
+    'post_type' => 'mv-slider',
+    'post_status' => 'publish',
+    'meta_key' => 'mv_slider_name',
+    'meta_value' => $slider_name,
+    'order_by' => $order_by
+];
+$sliders_query = new WP_Query($args);
+?>
+
 <div class="mv-slider flexslider ">
     <ul class="slides">
-        <?php
-            $args = [
-                'post_type' => 'mv-slider',
-                'post_status' => 'publish',
-                'meta_key' => 'mv_slider_name',
-                'meta_value' => $slider_name,
-                'order_by' => $order_by
-            ];
-            //var_dump($slider_name);
-            $sliders_query = new WP_Query($args);
-        ?>
         <?php
         if ($sliders_query->have_posts()) :
             while($sliders_query->have_posts()) : $sliders_query->the_post();
@@ -36,6 +37,7 @@
         </li>
         <?php
         endwhile;
+        wp_reset_postdata();
         endif;
         ?>
     </ul>

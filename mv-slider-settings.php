@@ -122,9 +122,11 @@ if (!class_exists('MV_Slider_Settings')) {
             <select name="mv_slider_options[mv_slider_style]" id="mv_slider_style"
                     value="<?php echo MV_Slider_Settings::$options['mv_slider_style'] ?? '' ?>">
                 <option <?php selected('dark', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
-                        value="dark"><?php echo esc_html__('Dark') ?></option>
+                        value="dark"><?php echo esc_html__('Dark') ?>
+                </option>
                 <option <?php echo selected('light', MV_Slider_Settings::$options['mv_slider_style'] ?? '', true) ?>
-                        value="light"><?php echo esc_html__('Light') ?></option>
+                        value="light"><?php echo esc_html__('Light') ?>
+                </option>
             </select>
             <?php
         }
