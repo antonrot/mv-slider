@@ -90,6 +90,9 @@
 
 .mv-slider.style-blue .flex-control-paging li a {
     background: rgb(247, 247, 247);
+    height: 10px;
+    width: 15px;
+    border-radius: 5px;
 }
 
 
@@ -106,7 +109,7 @@
     background: rgb(247, 247, 247);
     height: 10px;
     width: 15px;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .mv-slider.style-green .slider-details-container .link{
@@ -122,7 +125,7 @@
     background: rgb(247, 247, 247);
     height: 10px;
     width: 15px;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .mv-slider.style-orange .slider-details-container .link{
@@ -138,7 +141,7 @@
     background: rgb(247, 247, 247);
     height: 10px;
     width: 15px;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .mv-slider.style-purple .slider-details-container .link{
@@ -154,5 +157,5 @@
     background: rgb(247, 247, 247);
     height: 10px;
     width: 15px;
-    border-radius: 0;
+    border-radius: 5px;
 }

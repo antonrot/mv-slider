@@ -51,6 +51,39 @@ if (!class_exists('MV_Slider_Settings')) {
             );
             */
             add_settings_field(
+                'mv_slider_slideshow_speed',
+                'Slideshow Speed',
+                [$this, 'options_template_slideshow_speed_input'],
+                'mv_slider_settings_page_2',
+                'mv-slider-settings_options',
+                [
+                    'label_for' => 'mv_slider_slideshow_speed'
+                ]
+            );
+
+            add_settings_field(
+                'mv_slider_animation_speed',
+                'Animation Speed',
+                [$this, 'options_template_animation_speed_input'],
+                'mv_slider_settings_page_2',
+                'mv-slider-settings_options',
+                [
+                    'label_for' => 'mv_slider_animation_speed'
+                ]
+            );
+
+            add_settings_field(
+                'mv_slider_animation_type',
+                'Animation Type',
+                [$this, 'options_template_animation_type'],
+                'mv_slider_settings_page_2',
+                'mv-slider-settings_options',
+                [
+                    'label_for' => 'mv_slider_animation_type'
+                ]
+            );
+
+            add_settings_field(
                 'mv_slider_bullets',
                 'Display Control Bullets',
                 [$this, 'options_template_bullet_input'],
@@ -113,6 +146,42 @@ if (!class_exists('MV_Slider_Settings')) {
                    value="1"
                 <?php checked('1', MV_Slider_Settings::$options['mv_slider_bullets'] ?? '', true) ?>
             />
+            <?php
+        }
+
+        public function options_template_slideshow_speed_input() {
+            ?>
+            <input class="regular-text code"
+                   name="mv_slider_options[mv_slider_slideshow_speed]"
+                   type="text"
+                   id="mv_slider_slideshow_speed"
+                   value="<?php echo MV_Slider_Settings::$options['mv_slider_slideshow_speed'] ?? '3000' ?>"
+            />
+            <?php
+        }
+
+        public function options_template_animation_speed_input() {
+            ?>
+            <input class="regular-text code"
+                   name="mv_slider_options[mv_slider_animation_speed]"
+                   type="text"
+                   id="mv_slider_animation_speed"
+                   value="<?php echo MV_Slider_Settings::$options['mv_slider_animation_speed'] ?? '500' ?>"
+            />
+            <?php
+        }
+
+        public function options_template_animation_type() {
+            ?>
+            <select name="mv_slider_options[mv_slider_animation_type]" id="mv_slider_animation_type"
+                    value="<?php echo MV_Slider_Settings::$options['mv_slider_animation_type'] ?? '' ?>">
+                <option <?php selected('slide', MV_Slider_Settings::$options['mv_slider_animation_type'] ?? '', true) ?>
+                        value="slide"><?php echo esc_html__('Slide') ?>
+                </option>
+                <option <?php echo selected('fade', MV_Slider_Settings::$options['mv_slider_animation_type'] ?? '', true) ?>
+                        value="fade"><?php echo esc_html__('Fade') ?>
+                </option>
+            </select>
             <?php
         }
 
